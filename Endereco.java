@@ -1,25 +1,56 @@
+package semi2;
+
 
 public class Endereco {
-    String rua;
-    int numero;
-    String bairro;
-    String cidade;
-    String nacionalidade;
-    String codigopostal;
+    private String enderecocompleto;
+    private String cidade;
+    private String estado;
+    private String cep;
 
-    public Endereco(String rua, int numero, String bairro, String cidade, String nacionalidade, String codigopostal) {
-        this.rua = rua;
-        this.numero = numero;
-        this.bairro = bairro;
-        this.cidade = cidade;
-        this.nacionalidade = nacionalidade;
-        this.codigopostal = codigopostal;
+    public String getEnderecocompleto() {
+        return enderecocompleto;
     }
 
-    
+    public String getCidade() {
+        return cidade;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public String getCep() {
+        return cep;
+    }
+
+    public void setEnderecocompleto(String enderecocompleto) {
+        this.enderecocompleto = enderecocompleto;
+    }
+
+    public void setCidade(String cidade) {
+        this.cidade = cidade;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
+    public void setCep(String cep) {
+        this.cep = cep;
+    }
+
     @Override
     public String toString() {
-        return "endereco{" + "rua= " + rua + ", numero=" + numero + ", bairro=" + bairro + ", cidade=" + cidade + ", nacionalidade=" + nacionalidade + ", codigopostal=" + codigopostal + '}';
+        return "Endereco{" + "enderecocompleto=" + enderecocompleto + ", cidade=" + cidade + ", estado=" + estado + ", cep=" + cep + '}';
     }
+
+    public Endereco(String enderecocompleto, String cidade, String estado, String cep) {
+        this.enderecocompleto = enderecocompleto;
+        this.cidade = cidade;
+        this.estado = estado;
+        this.cep = cep;
+    }
+    
+    
     
 }
